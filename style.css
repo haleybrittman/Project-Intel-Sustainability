@@ -62,9 +62,12 @@ header p {
   overflow-x: auto;
   gap: 2rem;
   padding: 2rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .timeline > div, .timeline-card {
+  flex: 0 0 auto;
 }
 
 .timeline > div {
