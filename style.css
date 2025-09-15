@@ -1,1 +1,174 @@
 /* Add your CSS here */
+
+body {
+  background: linear-gradient(to bottom, #4797f9 0%, #4797f9 45%, #fff 45%, #fff 100%);
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  background: transparent;
+  z-index: 2;
+}
+
+header {
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+header > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header img {
+  width: 120px;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+  margin-left: 0;
+  margin-right: auto;
+  display: block;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  background: rgba(255,255,255,0.7);
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.timeline {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.timeline > div {
+  background: #dddddd;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  min-width: 300px;
+  max-width: 320px;
+  flex: 0 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s;
+}
+
+.timeline > div:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.timeline h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #0071c5;
+}
+
+.timeline h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.timeline p {
+  margin: 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.timeline-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  min-width: 220px;
+  max-width: 240px;
+  flex: 0 0 auto;
+  padding: 1rem 0.5rem;
+  scroll-snap-align: center;
+}
+
+.card-img-centered {
+  display: block;
+  margin: 1rem auto;
+  max-width: 260px;
+  max-height: 210px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  border: 3px solid #0071c5;
+  box-shadow: none;
+}
+
+.timeline-card h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #0071c5;
+  text-align: center;
+}
+
+.timeline-card h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+}
+
+.timeline-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #444;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  height: 0;
+  overflow: hidden;
+}
+
+.timeline-card:hover p {
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.3s;
+}
+
+/* Responsive: Stack cards vertically on small screens */
+@media (max-width: 900px) {
+  .timeline {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .timeline > div {
+    max-width: 95vw;
+    min-width: 260px;
+  }
+}
