@@ -62,8 +62,6 @@ header p {
   overflow-x: auto;
   gap: 2rem;
   padding: 2rem 1rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
 }
 
 .timeline > div {
@@ -114,7 +112,8 @@ header p {
   max-width: 240px;
   flex: 0 0 auto;
   padding: 1rem 0.5rem;
-  scroll-snap-align: center;
+  border: 3px solid #f5f5f5;
+  transition: box-shadow 0.3s, border-color 0.3s;
 }
 
 .card-img-centered {
@@ -158,6 +157,20 @@ header p {
   opacity: 1;
   height: auto;
   transition: opacity 0.3s;
+}
+
+.timeline-card:hover {
+  box-shadow: 0 0 0 4px #0071c5, 0 8px 24px rgba(0,0,0,0.12);
+  border-color: #0071c5;
+}
+
+
+footer, body > p:last-of-type {
+  text-align: center;
+  margin: 2rem auto 1rem auto;
+  width: 100%;
+  font-size: 1.05rem;
+  color: #333;
 }
 
 /* Responsive: Stack cards vertically on small screens */
